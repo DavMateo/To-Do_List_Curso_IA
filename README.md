@@ -38,7 +38,7 @@ La aplicación web cuenta con desarrollo de API Rest hechos con **FastAPI** y **
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-| `none` | `List` | Se usa al cargar la GUI. También se usa para exportar tareas. |
+| `none` | `JSON List` | Se usa al cargar la GUI. También se usa para exportar tareas. |
 
 #### Obtener una tarea específica  
 
@@ -48,7 +48,7 @@ La aplicación web cuenta con desarrollo de API Rest hechos con **FastAPI** y **
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `id`      | `dict` | Devuelve la tarea que coincida con el ID |
+| `id`      | `JSON` | Devuelve la tarea que coincida con el ID |
 
 
 #### Agregar una tarea  
@@ -59,7 +59,7 @@ La aplicación web cuenta con desarrollo de API Rest hechos con **FastAPI** y **
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `Tarea`      | `dict` | Obtiene los campos de la nueva tarea |
+| `Tarea`      | `JSON` | Obtiene los campos de la nueva tarea |
 
 
 #### Editar una tarea
@@ -70,7 +70,7 @@ La aplicación web cuenta con desarrollo de API Rest hechos con **FastAPI** y **
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `id`      | `dict` | Actualiza el campo de estado de la tarea |
+| `id`      | `JSON` | Actualiza el campo de estado de la tarea |
 
 #### Eliminar una tarea
 
@@ -80,7 +80,18 @@ La aplicación web cuenta con desarrollo de API Rest hechos con **FastAPI** y **
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `id`      | `none` | Elimina la tarea en cuestión |
+| `id`      | `string` | Elimina la tarea en cuestión |
+
+
+#### Importar una lista de tareas
+
+```http
+  POST /tareas/importar
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `File`      | `JSON` | Recibe una lista de tareas JSON y la carga a la base de datos|
 
 
 ## Instalación
