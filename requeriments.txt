@@ -1,0 +1,8 @@
+sqlalchemy
+sqlalchemy-utils
+fastapi
+uvicorn
+cryptography
+pymysql
+starlette
+python-dotenv
