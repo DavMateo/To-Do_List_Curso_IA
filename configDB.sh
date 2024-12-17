@@ -57,7 +57,7 @@ if ! command -v mysql &>/dev/null; then
 fi
 
 # Gestionar entorno virtual (con mensajes más informativos)
-VENV_DIR="./venv"
+VENV_DIR=".venv"
 if [[ -d "$VENV_DIR" ]]; then
     echo "Entorno virtual existente."
 else
@@ -73,10 +73,10 @@ case "$OSTYPE" in
 esac
 
 # Instalar dependencias
-if [[ -f "requirements.txt" ]]; then
-  echo "Instalando dependencias desde requirements.txt..."
+if [[ -f "requeriments.txt" ]]; then
+  echo "Instalando dependencias desde requeriments.txt..."
   pip install --upgrade pip # Actualizar pip antes de instalar las dependencias.
-  pip install -r requeriments.txt || { echo "Error al instalar las dependencias. Revise el archivo requirements.txt."; exit 1; }
+  pip install -r requeriments.txt || { echo "Error al instalar las dependencias. Revise el archivo requeriments.txt."; exit 1; }
   echo "Dependencias instaladas."
 else
     echo "Archivo requeriments.txt no encontrado. Continuando sin instalar dependencias."

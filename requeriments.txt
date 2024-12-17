@@ -6,3 +6,4 @@ cryptography
 pymysql
 starlette
 python-dotenv
+python-multipart
